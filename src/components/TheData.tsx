@@ -12,7 +12,8 @@ const { isLoading, data, error } = useQuery({
     queryKey: "data",
     queryFn:async ()=>{
         const data = await(
-        await fetch(`http://localhost:3000/api/data`)).json() as Data[] 
+          await fetch(`${process.env.NEXT_API_URL}/api/data`)
+        ).json() as Data[]; 
     return data
     },
 })
