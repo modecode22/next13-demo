@@ -10,7 +10,6 @@ export default function handler(
   res: NextApiResponse<Data[]>
 ) {
 
-
   const data = [
     { name: "name", description: "a looote of des" },
     { name: "name", description: "a looote of des" },

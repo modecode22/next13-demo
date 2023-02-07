@@ -1,4 +1,5 @@
 import './globals.css'
+import Providers from '@/app/Providers'
 
 export default function RootLayout({
   children,
@@ -8,7 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className='text-stone-200 bg-amber-900/20'>{children}</body>
+      <body className="text-stone-300 bg-slate-300">
+        <Providers>{children}</Providers>
+      </body>
     </html>
-  )
+  );
 }
