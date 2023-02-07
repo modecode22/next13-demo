@@ -7,7 +7,9 @@ type  Data = {
 
 export default async function Home() {
 
-  const data = await(await fetch("http://localhost:3000/api/data")).json() as Data[]
+  const data = await(
+    await fetch("http://127.0.0.1:3000/api/data")
+  ).json() as Data[];
   return (
     <>
       <header className="bg-stone-900 h-16 px-16 flex justify-center items-center font-bold text-4xl">
