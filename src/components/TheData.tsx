@@ -8,11 +8,13 @@ type  Data = {
 }
 const TheData = () => {
 
+console.log(process.env.NEXT_PUBLIC_API_URL + "/api/data");
+
 const { isLoading, data, error } = useQuery({
     queryKey: "data",
     queryFn:async ()=>{
         const data = await(
-          await fetch(`${process.env.NEXT_API_URL}api/data`)
+          await fetch(process.env.NEXT_PUBLIC_API_URL + "/api/data")
         ).json() as Data[]; 
     return data
     },
